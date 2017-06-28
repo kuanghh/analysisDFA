@@ -391,10 +391,8 @@ public class Main extends Application {
      * @param borderPane
      */
     public void checkStr(String text,List<Integer> acceptList,BorderPane borderPane,List<DFANode> nodeList){
-
         int length = text.length();
         boolean flag = true;
-
         //从0状态开始校验
         DFANode dfaNode = nodeList.get(0);
         for (int i = 0; i < length; i++) {
@@ -415,7 +413,6 @@ public class Main extends Application {
                 flag = false;
             }
         }
-
         GridPane gridPane = (GridPane) borderPane.getCenter();
         if(gridPane.getChildren().size() == 6){
             gridPane.getChildren().remove(5);

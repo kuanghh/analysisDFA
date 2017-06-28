@@ -14,6 +14,7 @@ public class DFANode {
 
     private int state;  //节点所代表的状态number
 
+    //保存每个节点之间的关系map
     private Map <Character,DFANode> relateMap = new HashMap<Character,DFANode>();
 
     public static double radius = 20.0;//默认半径
@@ -61,7 +62,6 @@ public class DFANode {
     public void setRelateMap(Map<Character, DFANode> relateMap) {
         this.relateMap = relateMap;
     }
-
     @Override
     public String toString() {
 
